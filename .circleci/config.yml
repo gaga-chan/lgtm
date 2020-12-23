@@ -5,9 +5,6 @@ jobs:
             - image: circleci/python:3.9.1
         steps:
             - checkout
-            - run:
-                command: |
-                    pip install --user -r requirements.lock
 
     test:
         docker:
