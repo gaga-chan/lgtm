@@ -5,23 +5,15 @@ jobs:
             - image: circleci/python:3.9.1
         steps:
             - checkout
-            - restore_cache:
-                key: deps-{{ checksum "requirements.lock" }}
             - run:
                 command: |
                     pip install --user -r requirements.lock
-            - save_cache:
-                key: deps-{{ checksum "requirements.lock" }}
-                paths:
-                    - "~/.local"
 
     test:
         docker:
             - image: circleci/python:3.9.1
         steps:
             - checkout
-            - restore_cache:
-                key: deps-{{ checksum "requirements.lock" }}  
             - run:
                 command: |
                     python3 -m unittest -v
