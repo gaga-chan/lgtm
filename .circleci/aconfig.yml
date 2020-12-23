@@ -34,3 +34,9 @@ workflows:
       - build:
           requires:
             - setup_dependencies
+<<<<<<< HEAD:.circleci/aconfig.yml
+=======
+
+            
+            
+>>>>>>> 352707e51b5455e2acc796806e7d2e5ce8496823:.circleci/config.yml
