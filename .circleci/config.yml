@@ -1,6 +1,5 @@
 version: 2
 jobs:
-<<<<<<< HEAD
   setup_dependencies:
     docker:
       - image: circleci/python:3.9.1
