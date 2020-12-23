@@ -1,6 +1,5 @@
 version: 2
 jobs:
-<<<<<<< HEAD
   setup_dependencies:
     docker:
       - image: circleci/python:3.9.1
@@ -35,31 +34,3 @@ workflows:
       - build:
           requires:
             - setup_dependencies
-
-            
-            
-=======
-    setup_dependencies:
-        docker:
-            - image: circleci/python:3.8.1
-        steps:
-            - checkout
-
-    test:
-        docker:
-            - image: circleci/python:3.8.1
-        steps:
-            - checkout
-            - run:
-                command: |
-                    python3 -m unittest -v
-workflows:
-    version: 2
-    all:
-        jobs:
-            - setup_dependencies
-            - test:
-                requires:
-                    - setup_dependencies
-                                    
->>>>>>> 20ebb2bc9859f4db0697510ff819ccfeb27038c3
